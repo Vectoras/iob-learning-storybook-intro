@@ -5,7 +5,15 @@
       <span class="checkbox-custom" @click="archiveTask" />
     </label>
     <label :for="'title-' + task.id" :aria-label="task.title" class="title">
-      <input type="text" readonly :value="task.title" :id="'title-' + task.id" name="title" placeholder="Input title" />
+      <input
+        type="text"
+        readonly
+        :value="task.title"
+        :id="'title-' + task.id"
+        name="title"
+        placeholder="Input title"
+        style="background: red"
+      />
     </label>
     <button
       v-if="!isChecked"
